@@ -1,0 +1,20 @@
+name: 'GitHub Actions Bot'
+
+on:
+  push:
+  schedule:
+    - cron: '* * * * *'
+
+jobs:
+  bot:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: 'Checkout codes'
+      uses: actions/checkout@v1
+
+    - name: crontab
+      run: |
+        curl https://mina.baobeihuijia.com
+      env:
+        CI: true
