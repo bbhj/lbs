@@ -15,6 +15,6 @@ jobs:
 
     - name: crontab
       run: |
-        curl https://mina.baobeihuijia.com
+        curl https://mina.baobeihuijia.com/?aaaa
       env:
         CI: true
