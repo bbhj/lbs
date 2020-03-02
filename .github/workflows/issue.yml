@@ -4,8 +4,6 @@ on:
     types: [opened,edited,reopened]
   issue_comment:
     types: [created,edited,deleted]
-  pull_request_comment:
-    types: [created, edited]
 
 
 jobs:
