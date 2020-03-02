@@ -2,6 +2,9 @@ name: "Set Issue"
 on:
   issues:
     types: [opened,edited,reopened]
+  issue_comment:
+    types: [created, deleted]
+
 
 jobs:
   test:
