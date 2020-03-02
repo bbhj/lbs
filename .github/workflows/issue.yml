@@ -1,7 +1,7 @@
 name: "Set Issue"
 on:
   issues:
-    types: [opened]
+    types: [opened,edited,reopened]
 
 jobs:
   test:
