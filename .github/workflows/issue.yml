@@ -10,13 +10,15 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: Naturalclar/issue-action@v1.0.0
+      - name: Set label
+        uses: Naturalclar/issue-action@v1.0.0
         with:
           keywords: '["help", "wanted"]'
           labels: '["help wanted"]'
           github-token: "${{ secrets.GITHUB_TOKEN }}"
 
-      - uses: Naturalclar/issue-action@v1.0.0
+      - name: Assigne
+        uses: Naturalclar/issue-action@v1.0.0
         with:
           keywords: '["test"]'
           assignees: '["deancn"]'
