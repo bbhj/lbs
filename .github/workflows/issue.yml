@@ -20,7 +20,7 @@ jobs:
       - name: Assigne
         uses: Naturalclar/issue-action@v1.0.0
         with:
-          keywords: '["@deancn"]'
+          keywords: '["test"]'
           assignees: '["deancn"]'
           github-token: "${{ secrets.GITHUB_TOKEN }}"
         run: |
