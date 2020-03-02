@@ -13,7 +13,6 @@ jobs:
           labels: '["help wanted"]'
           github-token: "${{ secrets.GITHUB_TOKEN }}"
 
-     - uses: Naturalclar/issue-action@v1.0.0
         with:
           keywords: '["test"]'
           assignees: '["deancn"]'
