@@ -1,4 +1,4 @@
-name: "Set Issue Label"
+name: "Set Issue"
 on:
   issues:
     types: [opened]
@@ -11,4 +11,10 @@ jobs:
         with:
           keywords: '["help", "wanted"]'
           labels: '["help wanted"]'
+          github-token: "${{ secrets.GITHUB_TOKEN }}"
+
+     - uses: Naturalclar/issue-action@v1.0.0
+        with:
+          keywords: '["test"]'
+          assignees: '["deancn"]'
           github-token: "${{ secrets.GITHUB_TOKEN }}"
