@@ -3,7 +3,9 @@ on:
   issues:
     types: [opened,edited,reopened]
   issue_comment:
-    types: [created, deleted]
+    types: [created,edited,deleted]
+  pull_request_comment:
+    types: [created, edited]
 
 
 jobs:
@@ -20,6 +22,9 @@ jobs:
       - name: Assigne
         uses: Naturalclar/issue-action@v1.0.0
         with:
-          keywords: '["test"]'
+          keywords: '["@deancn"]'
           assignees: '["deancn"]'
           github-token: "${{ secrets.GITHUB_TOKEN }}"
+        run: |
+          echo ${{ github.event.comment.body }}
+          echo ${{ github.event.changes.body.from }}
