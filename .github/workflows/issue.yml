@@ -29,11 +29,9 @@ jobs:
         with:
           keywords: '["rebuild"]'
           github-token: "${{ secrets.GITHUB_TOKEN }}"
-        run: |
-          echo "rebuild" ${{ github.event.comment.body }}
-          echo "rebuild k8s cluster"
 
       - name: Show new comments
         run: |
           echo ${{ github.event.comment.body }}
           echo ${{ github.event.changes.body.from }}
+          echo "rebuild k8s"
