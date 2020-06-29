@@ -13,7 +13,7 @@ jobs:
 
       - name: Show new comments
         id: hello
-        uses: airdb/actions@master
+        uses: airdb/actions@v0.0.1
         with:
           myInput: hello
 
