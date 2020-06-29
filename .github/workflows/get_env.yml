@@ -17,3 +17,8 @@ jobs:
           echo ${{ github.event.changes.body }}
           echo ${{ github.event }}
           env
+
+      - name: $github
+        run: echo "$GITHUB_CONTEXT"
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
