@@ -15,7 +15,7 @@ jobs:
         id: hello
         uses: airdb/actions@v0.0.1
         with:
-          myInput: hello
+          myInput: issue
 
       #- name: $github
        # run: echo "$GITHUB_CONTEXT"
