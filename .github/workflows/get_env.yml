@@ -12,18 +12,12 @@ jobs:
     steps:
 
       - name: Show new comments
-        run: |
-          echo https://developer.github.com/v3/issues/comments/
-          echo "comment.body" ${{ github.event.comment.body }}
-          echo "change.body" ${{ github.event.changes.body }}
-          echo "issue.title" ${{ github.event.issue.title }}
-          echo "comment.id"  ${{ github.event.comment.id }}
-          echo "comment_user" ${{ github.event.comment.user.login }}
-          echo ${{ github.event_name }}
+        id: hello
+        uses: airdb/actions@master
+        with:
+          myInput: hello
 
-          env
-
-      - name: $github
-        run: echo "$GITHUB_CONTEXT"
-        env:
-          GITHUB_CONTEXT: ${{ toJson(github) }}
+      #- name: $github
+       # run: echo "$GITHUB_CONTEXT"
+        #env:
+         # GITHUB_CONTEXT: ${{ toJson(github) }}
