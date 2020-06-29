@@ -14,10 +14,11 @@ jobs:
       - name: Show new comments
         run: |
           echo https://developer.github.com/v3/issues/comments/
-          echo ${{ github.event.comment.body }}
-          echo ${{ github.event.changes.body }}
-          echo ${{ github.event.comment.id }}
-          echo ${{ github.event.comment.user }}
+          echo "comment.body" ${{ github.event.comment.body }}
+          echo "change.body" ${{ github.event.changes.body }}
+          echo "issue.title" ${{ github.event.issue.title }}
+          echo "comment.id"  ${{ github.event.comment.id }}
+          echo "comment_user" ${{ github.event.comment.user.login }}
           echo ${{ github.event_name }}
 
           env
