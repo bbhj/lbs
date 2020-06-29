@@ -14,6 +14,6 @@ jobs:
       - name: Show new comments
         run: |
           echo ${{ github.event.comment.body }}
-          echo ${{ github.event.changes.body. }}
+          echo ${{ github.event.changes.body }}
           echo ${{ github.event }}
           env
